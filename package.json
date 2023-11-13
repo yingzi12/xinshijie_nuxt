@@ -1,18 +1,41 @@
 {
-  "name": "nuxt-app",
+  "name": "xinshijiessr",
+  "version": "0.0.2",
+  "description": "心世界,世界观构建，角色开发，故事写作指南，创意写作，文学创作资源，叙事结构，虚构世界设计，写作灵感，创作社区,小说创作技巧,世界观,故事,小说,设定,同人,世界观,背景,world view, story, novel, setting, fan, world view, background",
+  "productName": "心世界",
+  "author": "harry <time186335@gmail.com>",
   "private": true,
-  "type": "module",
+  "packageManager": "pnpm@8.3.1",
+  "contributors": [
+    {
+      "name": "Sebastien Chopin (@Atinux)"
+    },
+    {
+      "name": "Alexandre Chopin (@alexchopin)"
+    },
+    {
+      "name": "Pooya Parsa (@pi0)"
+    },
+    {
+      "name": "Anthony Fu (@antfu)"
+    }
+  ],
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "start": "nuxi start",
+    "lint": "eslint --ext .vue,.js,.ts --ignore-path .gitignore ."
   },
   "devDependencies": {
-    "@nuxt/devtools": "latest",
-    "nuxt": "^3.8.1",
-    "vue": "^3.3.8",
-    "vue-router": "^4.2.5"
+    "@nuxt/devtools": "^0.4.2",
+    "@nuxt/eslint-config": "^0.1.1",
+    "@nuxtjs/i18n": "^8.0.0-rc.5",
+    "@types/node": "^18.16.0",
+    "@vant/nuxt": "^1.0.4",
+    "eslint": "^8.39.0",
+    "nuxt": "^3.4.2",
+    "postcss-nesting": "^11.2.2",
+    "typescript": "^5.0.4",
+    "vant": "^4.7.3"
   }
 }

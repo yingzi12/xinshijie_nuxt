@@ -1,75 +1,66 @@
-# Nuxt 3 Minimal Starter
+# Nuxt Hacker News
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Hacker News clone built with [Nuxt](https://nuxt.com).
 
-## Setup
+<p align="center">
+  <a href="https://hn.nuxt.space" target="_blank">
+    <img width="1090" src="https://hn.nuxt.space/cover.jpg">
+    <br>
+    Live Demo
+  </a>
+</p>
 
-Make sure to install the dependencies:
+## Demo
 
-```bash
-# npm
-npm install
+https://hn.nuxt.space
 
-# pnpm
-pnpm install
+> Hosted on [Vercel](https://vercel.com/): `npm run build`
 
-# yarn
-yarn install
+To disable server-side render for a page, simply append `?csr` to the URL, example: https://hn.nuxt.space/news/1?csr
 
-# bun
-bun install
-```
+## Performance
 
-## Development Server
+- Lighthouse [100/100](https://pagespeed.web.dev/report?url=https%3A%2F%2Fhackernews-git-nuxt3-nuxt-js.vercel.app%2Fnews%2F1) (Slow 4G / Mobile Moto G4)
+  - Interactive: 1.4s
+  - Total Blocking Time: 30ms
 
-Start the development server on `http://localhost:3000`:
+## Features
 
-```bash
-# npm
+- Server Side Rendering
+- Vite-based hot module replacement (HMR) dev environment
+- Deploys anywhere with zero config (Vercel, Netlify, Cloudflare, etc.) powered by [Nitro](https://github.com/unjs/nitro)
+- Code Splitting
+- Prefetch/Preload JS + DNS + Data
+
+## Build Setup
+
+**Requires Node.js 14+**
+
+``` bash
+# install dependencies
+npm install # or yarn
+
+# serve in dev mode, with hot reload at localhost:3000
 npm run dev
 
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
+# build for production (server-side rendering)
 npm run build
 
-# pnpm
-pnpm run build
+# serve in production mode (server-side rendering)
+npm start
 
-# yarn
-yarn build
-
-# bun
-bun run build
+# validate and fix with ESLint (with Prettier)
+npm run lintfix
 ```
 
-Locally preview production build:
+## Links
 
-```bash
-# npm
-npm run preview
+For the Nuxt 2 version, check out the [`nuxt2` branch](https://github.com/nuxt/hackernews/tree/nuxt2)
 
-# pnpm
-pnpm run preview
+## License
 
-# yarn
-yarn preview
+MIT
 
-# bun
-bun run preview
-```
+## Credits
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+This repository is originally ported from [vue-hackernews-2.0](https://github.com/vuejs/vue-hackernews-2.0)
