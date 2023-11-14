@@ -1,4 +1,4 @@
-import request from '@/utils/request'
+import request from '~/server/utils/request'
 
 export function listChapter(query) {
   return request({

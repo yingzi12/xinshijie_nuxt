@@ -1,4 +1,4 @@
-import request from '@/utils/request'
+import request from '~/server/utils/request'
 
 // 查询世界列表
 export function listMangeWorld(query) {

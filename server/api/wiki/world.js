@@ -1,4 +1,4 @@
-import request from '@/utils/request'
+import request from '~/server/utils/request'
 
 // 查询世界列表
 export function listWorld(query) {
@@ -13,6 +13,12 @@ export function listWorld(query) {
 export function getWorld(id) {
   return request({
     url: '/wiki/world/getInfo/' + id,
+    method: 'get'
+  })
+}
+export function getWorldByName(name) {
+  return request({
+    url: '/wiki/world/getInfoByName/' + name,
     method: 'get'
   })
 }

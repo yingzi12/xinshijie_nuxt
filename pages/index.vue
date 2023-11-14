@@ -1,3 +1,86 @@
+<script lang="ts" setup>
+import {getCurrentInstance, inject, reactive, ref, toRefs} from 'vue';
+import {useRouter} from "vue-router";
+// import { listWorld } from "@/api/wiki/world";
+const imgUrl = inject("$imgUrl")
+const {  appContext : { config: { globalProperties } }  } = getCurrentInstance();
+
+const router = useRouter();
+
+const active = ref(0);
+const value = ref('');
+
+function  handleUser(){
+  console.log("user")
+  router.push("/user/index")
+}
+
+function  handleAdmin(){
+  router.push("/admin/index")
+}
+//编辑推荐 4个
+const worldRedact = ref([]);
+//随机推荐 18个
+const worldRandom = ref([]);
+const worldOriginal = ref([]);
+const worldChoiceness = ref([]);
+
+const total = ref(0);
+const dateRange = ref([]);
+const selectWorldName=ref(undefined);
+
+//查看详细
+function handleSee(id:number){
+  router.push("/world/index?wid="+id);
+}
+
+function handleList(){
+  router.push("/world/list");
+}
+/** 查询世界列表 */
+async function getRedactList() {
+  const request = await $fetch('/api/wiki/recommendWorld/list?kind=17').catch((error) => error.data)
+  console.log(JSON.stringify(request))
+  // getRecommendWorld(17).then(response => {
+  //   loading.value = false;
+  //   boutiqueList.value = response.data;
+  //   total.value = response.total;
+  // });
+  // listWorld(globalProperties.addDateRange(queryParams.value, dateRange.value)).then(response => {
+  //   worldRedact.value = response.rows;
+  // });
+}
+function getOriginalList() {
+  // queryParams.value.pageSize=4
+  // listWorld(globalProperties.addDateRange(queryParams.value, dateRange.value)).then(response => {
+  //   worldOriginal.value = response.rows;
+  // });
+}
+function getChoicenessList() {
+  queryParams.value.pageSize=4
+  // listWorld(globalProperties.addDateRange(queryParams.value, dateRange.value)).then(response => {
+  //   worldChoiceness.value = response.rows;
+  // });
+}
+function getRandomList() {
+  queryParams.value.pageSize=9
+  // listWorld(globalProperties.addDateRange(queryParams.value, dateRange.value)).then(response => {
+  //   worldRandom.value = response.rows;
+  // });
+}
+
+const onSearch = (val) => {
+  if(val != null && val != undefined) {
+    router.push("/world/list?selectWorldName=" + val);
+  }
+}
+
+
+getRedactList()
+getOriginalList();
+getChoicenessList();
+getRandomList()
+</script>
 <template>
 
   <van-search class="div-maggin" v-model="selectWorldName" placeholder="请输入搜索关键词"
@@ -898,96 +981,7 @@
 
 </template>
 
-<script lang="ts" setup>
-import {getCurrentInstance, inject, reactive, ref, toRefs} from 'vue';
-import {useRouter} from "vue-router";
-// import { listWorld } from "@/api/wiki/world";
-const imgUrl = inject("$imgUrl")
-const {  appContext : { config: { globalProperties } }  } = getCurrentInstance();
 
-const router = useRouter();
-
-const active = ref(0);
-const value = ref('');
-
-function  handleUser(){
-  console.log("user")
-  router.push("/user/index")
-}
-
-function  handleAdmin(){
-  router.push("/admin/index")
-}
-//编辑推荐 4个
-const worldRedact = ref([]);
-//随机推荐 18个
-const worldRandom = ref([]);
-const worldOriginal = ref([]);
-const worldChoiceness = ref([]);
-
-const total = ref(0);
-const dateRange = ref([]);
-const selectWorldName=ref(undefined);
-
-const data = reactive({
-  form: {},
-  queryParams: {
-    pageNum: 1,
-    pageSize:20,
-    name: undefined,
-    types: null,
-  },
-  rules: {
-    // userName: [{ required: true, message: "用户名称不能为空", trigger: "blur" }, { min: 2, max: 20, message: "用户名称长度必须介于 2 和 20 之间", trigger: "blur" }],
-  }
-});
-const { queryParams, form, rules } = toRefs(data);
-//查看详细
-function handleSee(id:number){
-  router.push("/world/index?wid="+id);
-}
-
-function handleList(){
-  router.push("/world/list");
-}
-/** 查询世界列表 */
-function getRedactList() {
-  queryParams.value.pageSize=4
-  // listWorld(globalProperties.addDateRange(queryParams.value, dateRange.value)).then(response => {
-  //   worldRedact.value = response.rows;
-  // });
-}
-function getOriginalList() {
-  queryParams.value.pageSize=4
-  // listWorld(globalProperties.addDateRange(queryParams.value, dateRange.value)).then(response => {
-  //   worldOriginal.value = response.rows;
-  // });
-}
-function getChoicenessList() {
-  queryParams.value.pageSize=4
-  // listWorld(globalProperties.addDateRange(queryParams.value, dateRange.value)).then(response => {
-  //   worldChoiceness.value = response.rows;
-  // });
-}
-function getRandomList() {
-  queryParams.value.pageSize=9
-  // listWorld(globalProperties.addDateRange(queryParams.value, dateRange.value)).then(response => {
-  //   worldRandom.value = response.rows;
-  // });
-}
-
-const onSearch = (val) => {
-  if(val != null && val != undefined) {
-    router.push("/world/list?selectWorldName=" + val);
-  }
-}
-
-
-getRedactList()
-getOriginalList();
-getChoicenessList();
-getRandomList()
-</script>
 
 <style scoped>
 .div-maggin{

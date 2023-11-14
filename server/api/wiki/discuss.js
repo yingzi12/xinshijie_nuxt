@@ -1,4 +1,4 @@
-import request from '@/utils/request'
+import request from '~/server/utils/request'
 
 // 查询世界评论列表
 export function listDiscuss(query) {
