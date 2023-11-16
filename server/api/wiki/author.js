@@ -1,4 +1,4 @@
-import request from '~/server/utils/request'
+
 
 export function listAuthor(sid) {
   return request({

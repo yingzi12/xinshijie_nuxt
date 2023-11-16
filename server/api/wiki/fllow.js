@@ -1,4 +1,4 @@
-import request from '~/server/utils/request'
+
 
 //
 export function getInfoByWid(wid) {

@@ -1,4 +1,4 @@
-import request from '~/server/utils/request'
+
 
 // 查询元素内容列表
 export function listContent(query) {

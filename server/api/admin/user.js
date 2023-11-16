@@ -1,4 +1,4 @@
-import request from '~/server/utils/request'
+
 
 // 查询用户详细
 export function getUser(id) {

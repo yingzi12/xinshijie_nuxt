@@ -1,4 +1,3 @@
-import request from '~/server/utils/request'
 
 export function listAuthor(id) {
   return request({

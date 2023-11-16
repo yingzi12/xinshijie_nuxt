@@ -1,4 +1,4 @@
-import request from '~/server/utils/request'
+
 
 // 查询居民数列表
 export function listRedident(query) {

@@ -1,4 +1,4 @@
-import request from '~/server/utils/request'
+
 
 // 查询元素分类列表
 export function listCategory(query) {
