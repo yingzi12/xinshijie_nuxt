@@ -2,42 +2,40 @@
 const config = useRuntimeConfig();
 const imgUrl=config.app.imgUrl
 const active = ref(0);
-
-
 const selectWorldName=ref(undefined);
 
 //编辑推荐 4个
 const worldEditList = ref([]);
 async function getEditList() {
   const request = await $fetch('/api/wiki/recommendWorld/list?kind=2').catch((error) => error.data)
-  worldEditList.value=request.value.data
+  worldEditList.value=request.data
 }
 //最新
 //随机推荐 18个
 const worldNewList = ref([]);
 async function getNewList() {
   const request = await $fetch('/api/wiki/recommendWorld/list?kind=5').catch((error) => error.data)
-  worldNewList.value=request.value.data
+  worldNewList.value=request.data
 }
 
 const worldRandomList = ref([]);
 //随机推荐4个
 async function getRandomList() {
   const request = await $fetch('/api/wiki/recommendWorld/list?kind=8').catch((error) => error.data)
-  worldRandomList.value=request.value.data
+  worldRandomList.value=request.data
 }
 //精品 9个
 const boutiqueList = ref([]);
 async function getBoutiqueList() {
   const request = await $fetch('/api/wiki/recommendWorld/list?kind=17').catch((error) => error.data)
-  boutiqueList.value=request.value.data
+  boutiqueList.value=request.data
 
 }
 
 const activeList = ref([]);
 async function getActiveList() {
   const request = await $fetch('/api/wiki/recommendWorld/list?kind=11').catch((error) => error.data)
-  activeList.value = request.value.data
+  activeList.value = request.data
 }
 function selectWname(){
 

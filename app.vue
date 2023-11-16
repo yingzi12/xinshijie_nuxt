@@ -9,15 +9,17 @@ useSeoMeta({
   twitterCreator: '@nuxt_js',
   twitterCard: 'summary_large_image',
 })
-useHead({
-  link: [
-    { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }
-  ]
-})
+// useHead({
+//   link: [
+//     { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }
+//   ]
+// })
+
 </script>
 
 <template>
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
+  <AppFooter />
 </template>
