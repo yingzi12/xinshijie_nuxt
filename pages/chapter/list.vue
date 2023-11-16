@@ -21,7 +21,7 @@ import { listChapterAll } from "@/api/wiki/chapter";
 import { getStory} from "@/api/wiki/story";
 import { useRoute, useRouter} from "vue-router";
 
-const {  appContext : { config: { globalProperties } }  } = getCurrentInstance();
+const config = useRuntimeConfig();
 const  indexList=ref([]);
 
 // 接收url里的参数

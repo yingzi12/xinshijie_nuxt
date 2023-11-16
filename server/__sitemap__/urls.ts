@@ -1,4 +1,3 @@
-
 export default defineSitemapEventHandler(async () => {
     const config = useRuntimeConfig();
     try {

@@ -55,7 +55,7 @@ const data = reactive({
     // userName: [{ required: true, message: "用户名称不能为空", trigger: "blur" }, { min: 2, max: 20, message: "用户名称长度必须介于 2 和 20 之间", trigger: "blur" }],
   }
 });
-const {  appContext : { config: { globalProperties } }  } = getCurrentInstance();
+const config = useRuntimeConfig();
 const worldTypes=reactive([{id:6,name:"科学"},{id:1,name:"武侠"},{id:2,name:"仙侠"},{id:3,name:"魔幻"},{id:4,name:"奇幻"},{id:5,name:"其他"}])
 const worldTypesMap=new Map([
   [6,"科学"],

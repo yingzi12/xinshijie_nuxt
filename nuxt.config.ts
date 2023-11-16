@@ -5,11 +5,16 @@ export default defineNuxtConfig({
     }
   },
   devtools: {
-    enabled: true
+    enabled: true,
+
+    timeline: {
+      enabled: true
+    }
   },
   modules: [
     '@nuxtjs/i18n',
-    '@vant/nuxt'
+    '@vant/nuxt',
+    '@nuxtseo/module'
   ],
   i18n: {
     locales: [
@@ -32,6 +37,20 @@ export default defineNuxtConfig({
   vant: {
     /** Options */
   },
-  css: ['~/assets/css/common.css']
+  css: ['~/assets/css/common.css'],
+  runtimeConfig: {
+    app:{
+      imgUrl:"https://image.aiavr.com"
+    },
+    // Public keys that are exposed to the client
+    public: {
+      baseUrl:  process.env.BASE_URL || 'https://admin.aiavr.com'
+    }
+  },
+  sitemap:{
+    sources: [
+      '/api/__sitemap__/urls',
+    ]
+  }
 
 })

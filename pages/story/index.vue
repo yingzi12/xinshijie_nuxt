@@ -83,14 +83,13 @@
 </template>
 
 <script lang="ts" setup>
-import {getCurrentInstance, inject, reactive, ref, toRefs} from 'vue'
 //接受参数
 import {useRoute, useRouter} from "vue-router";  // 引用vue-router
 import {  getStory } from "@/api/wiki/story";
 import {  listComment } from "@/api/wiki/comment";
 import {  listAuthor } from "@/api/wiki/author";
 import { listChapter } from "@/api/wiki/chapter";
-const {  appContext : { config: { globalProperties } }  } = getCurrentInstance();
+const config = useRuntimeConfig();
 
 const router = useRouter()
 // 接收url里的参数
@@ -140,7 +139,7 @@ const data = reactive({
 const { queryParams, commentForm, rules } = toRefs(data);
 
 //console.log("世界id="+story.value.id);
-const imgUrl = inject("$imgUrl")
+const imgUrl = config.app.imgUrl;
 const imageUrl=ref('')
 
 function handleChapter(){

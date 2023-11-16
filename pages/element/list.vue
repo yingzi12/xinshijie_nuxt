@@ -64,8 +64,8 @@ import { listElement } from "@/api/wiki/element";
 import { getTreeMobile} from "@/api/wiki/category";
 import { getWorld} from "@/api/wiki/world";
 const router = useRouter();
-const imgUrl = inject("$imgUrl")
-const {  appContext : { config: { globalProperties } }  } = getCurrentInstance();
+const imgUrl = config.app.imgUrl;
+const config = useRuntimeConfig();
 // 接收url里的参数
 const route = useRoute();
 const wid = ref(null);

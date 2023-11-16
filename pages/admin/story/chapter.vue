@@ -75,7 +75,7 @@ import {Dialog} from "vant";
 const route = useRoute();
 const router = useRouter();
 
-const {  appContext : { config: { globalProperties } }  } = getCurrentInstance();
+const config = useRuntimeConfig();
 
 const sid = ref(null);
 sid.value = route.query.sid;

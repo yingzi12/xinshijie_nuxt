@@ -5,7 +5,7 @@
   <div>
     <div class="header h-ind">
       <a href="./" class="logo-a">
-        <img src="style/image/logo.png" alt="">
+        <img src="/style/image/logo.png" alt="">
       </a>
       <div class="header-operate">
         <div class="wapapp app1">

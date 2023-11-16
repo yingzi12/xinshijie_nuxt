@@ -1,5 +1,3 @@
-
-
 // 查询世界评论列表
 export function listComment(query) {
   return request({

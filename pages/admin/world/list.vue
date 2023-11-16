@@ -47,8 +47,8 @@ import {getCurrentInstance, inject, reactive, ref, toRefs} from 'vue';
 import {useRouter} from "vue-router";
 import { listWorld } from "@/api/wiki/world";
 const router = useRouter();
-const imgUrl = inject("$imgUrl")
-const {  appContext : { config: { globalProperties } }  } = getCurrentInstance();
+const imgUrl = config.app.imgUrl;
+const config = useRuntimeConfig();
 
 const worldTypeDefault = ref(0);
 const worldStatusDefault = ref(0);

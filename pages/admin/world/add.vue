@@ -114,7 +114,7 @@ const data = reactive({
 });
 const { queryParams, form, rules } = toRefs(data);
 
-const imgUrl = inject("$imgUrl")
+const imgUrl = config.app.imgUrl;
 const imageUrl = ref([]);
 const wname = ref('');
 const onSubmit = (values) => {

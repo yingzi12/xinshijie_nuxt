@@ -51,7 +51,7 @@ scname.value = route.query.scname;
 const sname = ref('');
 sname.value = route.query.sname;
 //console.log("世界id="+wid.value);
-const {  appContext : { config: { globalProperties } }  } = getCurrentInstance();
+const config = useRuntimeConfig();
 
 const data = reactive({
   form: {},

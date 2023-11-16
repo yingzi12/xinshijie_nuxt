@@ -60,9 +60,9 @@
 <script lang="ts" setup>
 import useUserStore from '@/store/modules/user'
 import {  getUser } from "@/api/admin/user";
-import {inject, ref} from "vue";
+const config = useRuntimeConfig();
 const user = ref({})
-const imgUrl = inject("$imgUrl")
+const imgUrl = config.app.imgUrl;
 
 const imageUrl=ref('')
 function handleUser(){

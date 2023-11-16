@@ -58,7 +58,7 @@ import {getCurrentInstance, inject, reactive, ref, toRefs} from 'vue'
 import {useRoute, useRouter} from "vue-router";  // 引用vue-router
 import {  getWorld,issue } from "@/api/admin/world";
 import {Toast} from "vant";
-const {  appContext : { config: { globalProperties } }  } = getCurrentInstance();
+const config = useRuntimeConfig();
 
 const router = useRouter()
 // 接收url里的参数
@@ -102,7 +102,7 @@ const wid=ref(-1);
 wid.value=route.query.wid;
 world.value.id = route.query.wid;
 //console.log("世界id="+world.value.id);
-const imgUrl = inject("$imgUrl")
+const imgUrl = config.app.imgUrl;
 const imageUrl=ref('')
 
 //查看详细

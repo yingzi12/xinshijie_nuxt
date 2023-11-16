@@ -41,16 +41,15 @@
 </template>
 
 <script lang="ts" setup>
-import {getCurrentInstance, inject, reactive, ref} from 'vue'
 import {  getUser,updateUserBasic } from "@/api/admin/user";
 import {useRouter} from "vue-router";
 import {Dialog} from "vant";
 const router = useRouter()
 
-const {  proxy  } = getCurrentInstance();
+const config = useRuntimeConfig();
 
 const baseUrl = inject("$baseUrl")
-const imgUrl = inject("$imgUrl")
+const imgUrl = config.app.imgUrl;
 
 const uploadImgUrl = ref(baseUrl + "/common/uploadImage"); // 上传的图片服务器地址
 const imageUrlPath = ref('')

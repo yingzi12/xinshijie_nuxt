@@ -1,7 +1,10 @@
 
 
 // 查询世界列表
+import request from "~/server/utils/request";
+
 export function listWorld(query) {
+  console.log("listworld")
   return request({
     url: '/wiki/world/list',
     method: 'get',

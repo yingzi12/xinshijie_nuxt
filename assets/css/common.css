@@ -1756,7 +1756,7 @@ a.icon-more.active::after {
 
 .LoginBox a,.icon-person,.pgnavtop .LoginBox a {
     font-size: 0px;
-    background: url('../image/m.png') no-repeat center
+    /*background: url('../image/m.png') no-repeat center*/
 }
 
 .LoginBox {
@@ -2115,14 +2115,14 @@ a.icon-more.active::after {
 
 .book-meta.a a:first-child {
     padding-left: 17px;
-    background: url(../image/icon02.png) no-repeat -114px -2px;
+    /*background: url(/image/icon02.png) no-repeat -114px -2px;*/
     background-size: 135px
 }
 
 .book-meta.a a:last-child {
     margin-left: 10px;
     padding-left: 17px;
-    background: url(../image/m.png) no-repeat 1px 1px;
+    /*background: url(/image/m.png) no-repeat 1px 1px;*/
     background-size: 13px
 }
 
@@ -2807,9 +2807,9 @@ a.icon-more.active::after {
     padding-bottom: .75rem
 }
 
-.book-detail-x {
-    padding-top: 2.75rem
-}
+/*.book-detail-x {*/
+/*    padding-top: 2.75rem*/
+/*}*/
 
 .p2c {
     width: 100%;

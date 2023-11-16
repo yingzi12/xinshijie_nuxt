@@ -139,7 +139,7 @@ interface Image {
 }
 const { queryParams, form, rules } = toRefs(data);
 
-const imgUrl = inject("$imgUrl")
+const imgUrl = config.app.imgUrl;
 const imageUrl = ref<[Image]>([{url:""}]);
 const wname = ref('');
 const onSubmit = (values) => {

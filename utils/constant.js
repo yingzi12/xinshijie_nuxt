@@ -38,6 +38,7 @@ export const storyTypesMap=new Map([
 export const storyTypes=reactive([{id:6,name:"科学"},{id:1,name:"武侠"},{id:2,name:"仙侠"},{id:3,name:"魔幻"},{id:4,name:"奇幻"},{id:5,name:"其他"}])
 export const storyKind=reactive([{id:1,name:"主线"},{id:2,name:"支线"},{id:3,name:"杂谈"},{id:3,name:"异想"}])
 export const worldTypesMap=new Map([
+    [0,"未知"],
     [6,"科学"],
     [1,"武侠"],
     [2,"仙侠"],
@@ -46,6 +47,10 @@ export const worldTypesMap=new Map([
     [5,"其他"],
 ])
 export const worldTypes=reactive([{id:6,name:"科学"},{id:1,name:"武侠"},{id:2,name:"仙侠"},{id:3,name:"魔幻"},{id:4,name:"奇幻"},{id:5,name:"其他"}])
+
+export const worldTypesArr=[{value:0,text:"全部"},{value:6,text:"科学"},{value:1,text:"武侠"},{value:2,text:"仙侠"},{value:3,text:"魔幻"},{value:4,text:"奇幻"},{value:5,text:"其他"}]
+
+
 export const worldSource=reactive([{id:1,name:"原创"},{id:2,name:"电影"},{id:3,name:"小说"},{id:4,name:"游戏"},{id:5,name:"动漫"},{id:5,name:"电视剧"},{id:6,name:"其他"}])
 export const storyStatusMap = new Map([
     [0, "全部"],

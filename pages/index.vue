@@ -54,7 +54,7 @@ getActiveList();
                @search="selectWname"
   />
   <van-divider style="margin: 0px;" />
-  <van-grid class="div-maggin home-nav"  :border="false" :column-num="6">
+  <van-grid class="div-maggin home-nav"  :border="false" :column-num="3">
     <van-grid-item icon='/icon/solution2.svg' text="优秀世界" to="/world/index"/>
     <van-grid-item icon='/icon/novel.svg' text="热门故事" to="/story/index" />
     <van-grid-item icon='/icon/user.svg' text="收藏" to="/user/index"/>
@@ -74,7 +74,7 @@ getActiveList();
         <h3 class="novel-title">世界-热门推荐</h3>
       </div>
       <div class="novel-header-r">
-        <a href="/?pbcode/shuku/">更多</a>
+        <a href="/world/list">更多</a>
       </div>
     </div>
     <div class="novel-slide">

@@ -51,8 +51,8 @@ import {  getWorld } from "@/api/admin/world";
 import { listStory } from "@/api/admin/story";
 const router = useRouter();
 const route = useRoute();
-const imgUrl = inject("$imgUrl")
-const {  appContext : { config: { globalProperties } }  } = getCurrentInstance();
+const imgUrl = config.app.imgUrl;
+const config = useRuntimeConfig();
 
 // const wid=ref(-1);
 // wid.value=route.query.wid;
