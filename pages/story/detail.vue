@@ -146,7 +146,7 @@ getStoryList();
       <div class="book-layout">
         <!--        <img style="width: 145px;height: 192px"-->
         <!--             :src="imgUrl+world.imgUrl"-->
-        <!--             onerror="this.src='/style/image/empty2.webp'"-->
+        <!--             onerror="this.src='/style/image/empty.png'"-->
         <!--             class="book-cover-blur" :alt="world.name"/>-->
         <img src="https://www.51xs.uk/files/article/image/8/8719/8719s.jpg" onerror="this.src='style/image/empty.jpg'"
              alt="凡间狱" class="book-cover">

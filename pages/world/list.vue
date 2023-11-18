@@ -114,7 +114,7 @@ const handleSee = (id: number) => router.push('/world/detail?wid=' + id);
           <a :href="'/world/detail?wid='+world.id" class="book-layout">
             <img style="width: 92px;height: 123px"
                 :src="imgUrl+world.imgUrl"
-                onerror="this.src='/style/image/empty2.webp'"
+                onerror="this.src='/style/image/empty.png'"
                 class="book-cover" :alt="world.name">
             <div class="book-cell">
               <h4 class="book-title">{{world.name}}<van-tag v-if="world.source=='原创'">原创</van-tag></h4>
